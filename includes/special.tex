@@ -1,0 +1,76 @@
+
+\mode<presentation> {
+    
+    %\usetheme{default}
+    %\usetheme{AnnArbor}
+    %\usetheme{Antibes}
+    %\usetheme{Bergen}
+    %\usetheme{Berkeley}
+    %\usetheme{Berlin}
+    %\usetheme{Boadilla}
+    %\usetheme{CambridgeUS}
+    %\usetheme{Copenhagen}
+    %\usetheme{Darmstadt}
+    %\usetheme{Dresden}
+    %\usetheme{Frankfurt}
+    %\usetheme{Goettingen}
+    %\usetheme{Hannover}
+    %\usetheme{Ilmenau}
+    %\usetheme{JuanLesPins}
+    %\usetheme{Luebeck}
+    %\usetheme{Madrid}		
+    %\usetheme{Malmoe}
+    %\usetheme{Marburg}
+    %\usetheme{Montpellier}
+    %\usetheme{PaloAlto}
+    %\usetheme{Pittsburgh}
+    %\usetheme{Rochester}
+    %\usetheme{Singapore}
+    %\usetheme{Szeged}
+
+    %dark colors theme
+    \definecolor{yellow}{HTML}{6d5406}
+    \definecolor{purple}{HTML}{530637} 
+    \definecolor{lightbrown}{HTML}{a52a2a} 
+    \definecolor{brown}{HTML}{751e1e} 
+    \definecolor{green}{HTML}{001400} 
+    \definecolor{blue}{HTML}{000047} 
+    \definecolor{red}{HTML}{4f050b} 
+    \definecolor{pink}{HTML}{ac1628} 
+    \definecolor{orange}{HTML}{a52600} 
+    \definecolor{cyan}{HTML}{008b8b} 
+    \definecolor{magenta}{HTML}{7a2b7a} 
+    \definecolor{salmon}{HTML}{b51f07} 
+    \definecolor{cyanblue}{HTML}{004985} 
+    \definecolor{caramel}{HTML}{ad4400} 
+    \definecolor{purpleblue}{HTML}{4F5B93} 
+    \usetheme{Warsaw}
+    \usecolortheme[named=red]{structure}
+    \setbeamercovered{transparent}
+    \usefonttheme{serif}
+    \setbeamertemplate{frametitle continuation}{\insertcontinuationcount}
+    \newcommand*\oldmacro{}%
+    \let\oldmacro\insertshorttitle%
+    \renewcommand*\insertshorttitle{%
+      \oldmacro\hfill%
+      \insertframenumber\,/\,\inserttotalframenumber}
+}
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+%full size image
+\usepackage[absolute,overlay]{textpos}
+\setlength{\TPHorizModule}{1cm}
+\setlength{\TPVertModule}{1cm}
+\newcommand<>{\fullsizegraphic}[1]{
+  \begin{textblock}{0}(0,0)
+    \only#2{
+      \begin{tikzpicture}
+        \fill [black] (current page.north west) rectangle (current page.south east);
+        \node[overlay] at (current page.center)
+          {\includegraphics[width=\paperwidth,height=\paperheight]{#1}};
+      \end{tikzpicture}
+    }
+  \end{textblock}
+}

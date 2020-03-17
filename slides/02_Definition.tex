@@ -1,0 +1,118 @@
+\section[Definition]{Definition}
+\begin{frame}
+    \frametitle{Definition}
+    \hspace{-1cm}
+	\begin{minipage}{0.75\linewidth}
+    \renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm}
+    \begin{itemize}\itemsep1em
+        \item Subclass of information filtering system that seeks to predict the \textbf{rating} or \textbf{preference} a user would give to an item. They are primarily used in commercial applications.
+        \item  2 types of information that are used by recommendations :
+        \vspace{1mm}
+        \fontsize{9}{12}\selectfont
+        \setbeamertemplate{itemize items}[triangle]
+        \begin{itemize}\itemsep0.2em
+            \item \textbf{Explicit} feedback datasets
+            \item \textbf{Implicit} feedback datasets
+        \end{itemize}
+     \end{itemize}
+	 \end{minipage}
+	 \begin{minipage}{0.15\linewidth}
+	    \begin{figure}
+            \includegraphics[scale=0.5]{figures/system.jpg}
+		\end{figure}
+	 \end{minipage}
+\end{frame}
+
+\subsection{Explicit feedback datasets}
+
+\begin{frame}{Explicit feedback datasets}
+\frametitle{Explicit feedback datasets}
+\hspace{-0.5cm}
+{\Large \textbf{Concept:}\par}
+\vspace{3mm}
+Explicit feedback data as the name suggests is an exact number given by a user to an item.
+\vspace{0.3cm}
+\begin{center}
+\begin{table}
+    \centering
+    \begin{tabular}{|c|c|c|c|c|} \hline
+         & Item 1 & Item 2 & Item 3 & Item 4  \\ \hline
+         User 1 & 5 & 1 & 3 & 5  \\ \hline
+         User 2 &  ?  &  ?  &  ?  & 2   \\ \hline
+         User 3 & 4 &  ?  & 3 &  ? \\ \hline
+    \end{tabular}
+    \caption{Explicit example}
+\end{table}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\hspace{-0.5cm}
+\frametitle{Explicit feedback datasets}
+\hspace{-0.5cm}
+{\Large
+\vspace{5mm}
+\textbf{Issues:}
+\par}
+\hspace{-0.7cm}
+\begin{minipage}{0.75\linewidth}
+\begin{itemize}
+    \item Dataset will be largely filled with a lot of positive ratings but very less negative ratings.
+    \item Hard to collect as they require additional input from the users;
+    \item Does not take into consideration the context of when you were consulting an item.
+    \item For me a good item will be rated 3/5 but may be, for you, a good item is rated 4/5 so clearly our ways of rating.
+\end{itemize}
+\end{minipage}
+	 \begin{minipage}{0.2\linewidth}
+	 
+	    \begin{figure}
+            \includegraphics[scale=0.3]{figures/issues.jpg}
+		\end{figure}
+	 \end{minipage}
+\end{frame}
+
+\subsection{Implicit feedback datasets}
+\begin{frame}
+\frametitle{Implicit feedback datasets}
+\hspace{-0.5cm}
+{\Large \textbf{Concept:}\par}
+\vspace{3mm}
+The dictionary meaning of implicit is suggested though not stated clearly. And that’s exactly what implicit feedback data represents. Implicit feedback does not directly reflect the interest of the user but it acts as a proxy for a user’s interest.
+\vspace{0.2cm}
+\begin{center}
+\begin{table}
+    \centering
+    \begin{tabular}{|c|c|c|c|c|} \hline
+         & Item 1 & Item 2 & Item 3 & Item 4  \\ \hline
+         User 0 & 1 & 2 & 10 & 1  \\ \hline
+         User 2 &  5  &  0  &  3  & 2   \\ \hline
+         User 3 & 4 &  0  & 3 &  0\\ \hline
+    \end{tabular}
+    \caption{Implicit example}
+\end{table}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Implicit feedback datasets}
+\hspace{-0.7cm}
+{\Large
+\vspace{5mm}
+\textbf{Issues:}
+\par}
+\vspace{-10mm}
+\hspace{-0.7cm}
+\begin{minipage}{0.8\linewidth}
+\begin{itemize}
+    \item No negative preference measured directly.
+    \item The numerical value of implicit feedback denotes confidence that the user likes the item.
+\end{itemize}
+
+	 \end{minipage}
+	 \begin{minipage}{0.2\linewidth}
+	 
+	    \begin{figure}
+            \includegraphics[scale=0.3]{figures/issues.jpg}
+		\end{figure}
+	 \end{minipage}
+\end{frame}

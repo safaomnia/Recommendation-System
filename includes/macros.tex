@@ -1,0 +1,26 @@
+% Ce fichier contient toutes les macros que vous pouvez avoir envie de définir 
+\PassOptionsToPackage{svgnames}{color}
+\newenvironment{code}{%
+    \begin{mdframed}[
+        linecolor=green,
+        innerrightmargin=30pt,
+        innerleftmargin=30pt,
+        backgroundcolor=black!5,
+        skipabove=10pt,
+        skipbelow=10pt,
+        roundcorner=5pt,
+        splitbottomskip=6pt,
+        splittopskip=12pt
+    ]
+}{\end{mdframed}}
+\newcommand{\U}[1]{~\mathrm{#1}}
+\newcommand{\ofg}[1]{\og{}#1\fg{}}
+\newcommand{\dd}{\text{d}}
+\newcommand{\ddt}[1]{\frac{\dd #1}{\dd t}}
+\newcommand{\pa}[1]{\left(#1\right)}
+\newcommand{\pac}[1]{\left[#1\right]}
+\newcommand{\paa}[1]{\left\{#1\right\}}
+\newcommand{\cte}{\text{C}^{\text{te}}}
+\newcommand{\e}[1]{_{\text{#1}}}
+\newcommand{\vectoriel}{\wedge}
+\renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm}

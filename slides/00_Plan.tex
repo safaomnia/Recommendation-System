@@ -1,0 +1,35 @@
+\begin{frame}
+    \titlepage %view the page gard
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Outline} 
+\fontsize{10}{9}\selectfont
+\tableofcontents[
+    currentsection,
+    sectionstyle=show/show,
+    subsectionstyle=show/show/hide,
+  ]
+\end{frame}
+
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>{Outline}
+    \fontsize{10}{9}\selectfont
+    \tableofcontents[ 
+        currentsection,hideothersubsections
+     ] 
+  \end{frame}
+}
+\AtBeginSubsection[]
+{
+  \begin{frame}<beamer>{Outline}
+  \fontsize{10}{10}\selectfont
+    \tableofcontents[ 
+        currentsection,
+        currentsubsection,
+        subsectionstyle=show/shaded/hide
+    ] 
+  \end{frame}
+}
